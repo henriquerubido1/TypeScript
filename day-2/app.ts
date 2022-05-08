@@ -25,6 +25,12 @@ enum Test { TEST1 = 7, TEST2, TEST3 };
 enum Test2 { STR1 = 'STR1', STR2 = 0, STR3 }
 console.log(Test.TEST2);
 
+// any type allows you not to specify the type of the variable
+
+let testAny: any;
+testAny = 'aaa';
+console.log(testAny);
+
 
 const person = {
 	name: 'henrique',
@@ -37,4 +43,4 @@ const person = {
 let favoriteActivities: string[];
 favoriteActivities = ['Sports']
 
-console.log(person.name);
+console.log(person);
