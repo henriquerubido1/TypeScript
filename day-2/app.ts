@@ -1,10 +1,10 @@
-function types(num: number, str: string, bool: boolean) {
-    console.log(`${num} is a ${typeof num}, ${str} is a ${typeof str} and ${bool} is a ${typeof bool}`);
-    
-}
+const person: {
+	name: string,
+	age: number
+} = {
+// const person = {
+	name: 'henrique',
+	age: 20
+};
 
-const number = 4;
-const string = 'a';
-const boolean = true;
-
-types(number, string, boolean);
+console.log(person.name);
