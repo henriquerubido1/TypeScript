@@ -1,23 +1,25 @@
-// union and literal type examples bellow
-// union type accepts more than one type of variable
-// input1, input2 and resultConversion are union type variables
-function combine(input1, input2, resultConversion) {
-    var result;
-    if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
-        result = +input1 + +input2;
-    }
-    {
-        result = input1.toString() + input2.toString();
-    }
-    if (resultConversion === 'as-number') {
-        return +result;
-    }
-    {
-        return result.toString();
-    }
+// :number after the parameters assures that the function
+// returns a number
+function add(n1, n2) {
+    return n1 + n2;
 }
-var combinedAges = combine(30, 26, 'as-number');
-var combinedStringAges = combine('30', '26', 'as-number');
-var combinedNames = combine('Max', 'Anna', 'as-text');
-console.log(combinedAges);
-console.log(combinedNames);
+// :void is a function that does not return anything
+// in this case, it is not necessary to type :void
+// and it is just there to make it explicit
+function printResult(num) {
+    console.log('Result: ' + num);
+}
+function addAndHandle(n1, n2, callback) {
+    var result = n1 + n2;
+    callback(result);
+}
+printResult(add(5, 12));
+// let combineValues: Function;
+// this makes sure that combineValues accepts only a function
+// with 2 nums as its parameters and that returns a number
+var combineValues;
+combineValues = add;
+console.log(combineValues(8, 8));
+addAndHandle(10, 20, function (result) {
+    console.log(result);
+});
