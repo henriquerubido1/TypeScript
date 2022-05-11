@@ -97,5 +97,19 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+  },
+  // exclude creates an array with paths that
+  // shouldn't be compiled. You can use * as
+  // a wild card
+  "exclude": [
+    "analytics.ts",
+    "**/*.dev.ts",
+    "node_modules"
+  ],
+  "include": [
+    "app.ts"
+  ],
+  "files": [
+    "app.ts"
+  ]
 }
